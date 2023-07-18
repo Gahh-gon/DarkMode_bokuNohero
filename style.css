@@ -107,7 +107,7 @@ background-color: #000118;
         background-color: #D90505;   
     }
     #Logo{
-        width: 300px;
+        width: 340px;
     }
     .darkModeB{
         background-color: #000118;
@@ -116,7 +116,7 @@ background-color: #000118;
     padding: 10px;
         display: flex;
        flex-direction: column;
-        gap: 8px;
+        gap: 7px;
          
       
     }
@@ -126,13 +126,13 @@ background-color: #000118;
     }
     div > div{
             width: 180px;
-            height: 350px;
+            height: 310px;
         
         }
 
      .container_cads12,.container_cads34{
         display: flex;
-        gap: 10px;
+        gap: 7px;
     }
     .icon_mode{
         width: 49px;
@@ -141,7 +141,18 @@ background-color: #000118;
         left: 4%;
      
     }
-     
+    .descript{
+        padding: 10px;
+        font-size: 18px;
+       
+    }
     
+    .playImg,.pauseImg {
+    width: 36px;
+    }
+     
+    #iconImg0,#iconImg1,#iconImg2,#iconImg3{
+        width: 40px;
+    }
     
    }
