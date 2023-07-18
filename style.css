@@ -113,10 +113,10 @@ background-color: #000118;
         background-color: #000118;
         }
   article{
-    padding: 20px;
+    padding: 10px;
         display: flex;
        flex-direction: column;
-        gap: 20px;
+        gap: 8px;
          
       
     }
@@ -132,7 +132,7 @@ background-color: #000118;
 
      .container_cads12,.container_cads34{
         display: flex;
-        gap: 16px;
+        gap: 10px;
     }
     .icon_mode{
         width: 49px;
