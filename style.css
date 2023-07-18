@@ -106,6 +106,9 @@ background-color: #000118;
     body{
         background-color: #D90505;   
     }
+    #Logo{
+        width: 60%;
+    }
     .darkModeB{
         background-color: #000118;
         }
@@ -118,11 +121,11 @@ background-color: #000118;
       
     }
     .bannerImg{
-        width: 200px;
+        width: 190px;
       
     }
     div > div{
-            width: 200px;
+            width: 190px;
             height: 350px;
         
         }
@@ -134,8 +137,8 @@ background-color: #000118;
     .icon_mode{
         width: 50px;
         position: absolute;
-        top: 9%;
-        left: 9%;
+        top: 12%;
+        left: 8%;
      
     }
      
