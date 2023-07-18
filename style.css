@@ -43,13 +43,19 @@ article{
     gap: 50px;
     align-items: center;
     justify-content: center;
+    
   
 }
-div{
-    background-color: white;
-}
+  .container_cads12,.container_cads34{
+        display: flex;
+        gap: 50px;
+     
+    } 
+      
+
 div > div{
 display: flex;
+background-color: white;
 flex-direction: column;
 align-items: center;
     justify-content: center;
@@ -95,4 +101,44 @@ width: 46px;
 .darkModeArt{
 background-color: #000118;
 }
-/* 310 */
+
+@media (max-width: 768px){
+    body{
+        background-color: #D90505;   
+    }
+    .darkModeB{
+        background-color: #000118;
+        }
+  article{
+    padding: 20px;
+        display: flex;
+       flex-direction: column;
+        gap: 20px;
+         
+      
+    }
+    .bannerImg{
+        width: 200px;
+      
+    }
+    div > div{
+            width: 200px;
+            height: 350px;
+        
+        }
+
+     .container_cads12,.container_cads34{
+        display: flex;
+        gap: 20px;
+    }
+    .icon_mode{
+        width: 50px;
+        position: absolute;
+        top: 9%;
+        left: 9%;
+     
+    }
+     
+    
+    
+   }
