@@ -52,7 +52,9 @@ article{
      
     } 
       
-
+    .btn_container{
+        display: none;
+    }
 div > div{
 display: flex;
 background-color: white;
@@ -106,34 +108,18 @@ background-color: #000118;
     body{
         background-color: #D90505;   
     }
-    #Logo{
-        width: 340px;
-    }
-    .darkModeB{
-        background-color: #000118;
-        }
-  article{
-    padding: 10px;
-        display: flex;
-       flex-direction: column;
-        gap: 7px;
-         
-      
-    }
-    .bannerImg{
-        width: 180px;
-      
-    }
-    div > div{
-            width: 180px;
-            height: 310px;
-        
-        }
+   
 
-     .container_cads12,.container_cads34{
-        display: flex;
+     .noneCardVisivel,.container_cads34{
+        display: none;
         gap: 7px;
     }
+    .cardVisivel{
+        display: flex;
+        
+    
+    }
+ 
     .icon_mode{
         width: 49px;
         position: absolute;
@@ -143,15 +129,33 @@ background-color: #000118;
     }
     .descript{
         padding: 10px;
-        font-size: 18px;
+        font-size: 19px;
        
     }
     
     .playImg,.pauseImg {
-    width: 36px;
+    width: 50px;
     }
-     
-    #iconImg0,#iconImg1,#iconImg2,#iconImg3{
+    div {
+        margin-top: 8px;
+    }
+    div > div{
+            width: 240px;
+        }
+        .bannerImg{
+            width: 240px;
+            
+          
+        }
+    .btn_container{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: row;
+     margin: 10px;
+     gap: 70px;
+    }
+    .btn_container img{
         width: 40px;
     }
     
