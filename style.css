@@ -142,6 +142,10 @@ background-color: #000118;
     div > div{
             width: 240px;
         }
+        header img{
+            width: 50%;
+            margin-bottom: 30px;
+        }
         .bannerImg{
             width: 240px;
             
