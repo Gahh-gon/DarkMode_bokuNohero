@@ -140,14 +140,16 @@ background-color: #000118;
         margin-top: 8px;
     }
     div > div{
-            width: 240px;
+        width: 249px;
+        height: 299px;
+    
         }
         header img{
-            width: 50%;
+            width: 60%;
             margin-bottom: 30px;
         }
         .bannerImg{
-            width: 240px;
+            width: 250px;
             
           
         }

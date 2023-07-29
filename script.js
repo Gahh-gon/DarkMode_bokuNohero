@@ -37,10 +37,17 @@ const musicStored = [
   
 ]
 
-let overhaul = new musicContainer('assets/banner_overhaul.svg', 'Revisão | Overhaul ( Boku no Hero ) | Enygma', 'assets/icon_enygma.svg','Enygma','assets/overhaul.mp4')
-let himiko = new musicContainer('assets/banner_himiko.svg','Himiko Toga(Boku no Hero)OQUE ME FAZ TE AMAR | Felícia Rock','assets/Icon_Felicia.svg','Felícia Rock','assets/himiko.mp4')
-let gentle = new musicContainer('assets/banner_gentle.svg', 'Malfeitor Gentil | Novatroop | Gentle Criminal (Boku no Hero)', 'assets/icon_novatrop.svg','Novatroop','assets/gentle.mp4')
-let schigaraki = new musicContainer('assets/banner_schigaraki.svg','Shigaraki Tomura - O Símbolo do Mal (Boku no Hero) TK RAPS','assets/icon_tkRaps.svg','TK RAPS','assets/schigaraki.mp4')
+const musicStoredDark = [
+  {content : new musicContainer('assets/banner_overhaul.svg', 'Revisão | Overhaul ( Boku no Hero ) | Enygma', 'assets/icon_enygma.svg','Enygma','assets/overhaul.mp4')},
+  {content : new musicContainer('assets/banner_himiko.svg','Himiko Toga(Boku no Hero)OQUE ME FAZ TE AMAR | Felícia Rock','assets/Icon_Felicia.svg','Felícia Rock','assets/himiko.mp4')},
+  {content : new musicContainer('assets/banner_gentle.svg', 'Malfeitor Gentil | Novatroop | Gentle Criminal (Boku no Hero)', 'assets/icon_novatrop.svg','Novatroop','assets/gentle.mp4')},
+  {content : new musicContainer('assets/banner_schigaraki.svg','Shigaraki Tomura - O Símbolo do Mal (Boku no Hero) TK RAPS','assets/icon_tkRaps.svg','TK RAPS','assets/schigaraki.mp4')}
+]
+
+ 
+ 
+ 
+ 
 
 
 
@@ -75,6 +82,7 @@ audio[3].src = musicStored[3].content.music
 
 
 IncoMode.addEventListener('click',DarkMode)
+
 
 
 function playMusic(){
@@ -144,105 +152,154 @@ buttonPause[3].style = "display:none;"
 
 
 function DarkMode(){
- 
+
   body.classList.toggle('darkModeB')
   main.classList.toggle('darkModeArt')
+  let IfDarkMode = body.classList == "darkModeB"
 
-  if(body.classList == "darkModeB"){
+  if(IfDarkMode){
+
   IncoMode.src = 'assets/icon_sol.svg'
   logoImg.src = 'assets/logo_myVillain.svg'
-  bannerImg[0].src = overhaul.bannerImg
-  iconImg[0].src = overhaul.iconImg
-  nameAuthor[0].innerHTML = overhaul.nameAuthor
-  descript[0].innerHTML = overhaul.descript
-  audio[0].src = overhaul.music
+  bannerImg[0].src = musicStoredDark[0].content.bannerImg
+iconImg[0].src = musicStoredDark[0].content.iconImg
+nameAuthor[0].innerHTML = musicStoredDark[0].content.nameAuthor
+descript[0].innerHTML = musicStoredDark[0].content.descript
+audio[0].src = musicStoredDark[0].content.music
 
-  bannerImg[1].src = himiko.bannerImg
-  iconImg[1].src = himiko.iconImg
-  nameAuthor[1].innerHTML = himiko.nameAuthor
-  descript[1].innerHTML = himiko.descript
-  audio[1].src = himiko.music
+bannerImg[1].src = musicStoredDark[1].content.bannerImg
+iconImg[1].src = musicStoredDark[1].content.iconImg
+nameAuthor[1].innerHTML = musicStoredDark[1].content.nameAuthor
+descript[1].innerHTML = musicStoredDark[1].content.descript
+audio[1].src = musicStoredDark[1].content.music
 
-  bannerImg[2].src = gentle.bannerImg
-  iconImg[2].src = gentle.iconImg
-  nameAuthor[2].innerHTML = gentle.nameAuthor
-  descript[2].innerHTML = gentle.descript
-  audio[2].src = gentle.music
+bannerImg[2].src =  musicStoredDark[2].content.bannerImg
+iconImg[2].src =  musicStoredDark[2].content.iconImg
+nameAuthor[2].innerHTML = musicStoredDark[2].content.nameAuthor
+descript[2].innerHTML = musicStoredDark[2].content.descript
+audio[2].src = musicStoredDark[2].content.music
 
-  bannerImg[3].src = schigaraki.bannerImg
-  iconImg[3].src = schigaraki.iconImg
-  nameAuthor[3].innerHTML = schigaraki.nameAuthor
-  descript[3].innerHTML = schigaraki.descript
-  audio[3].src = schigaraki.music  
+bannerImg[3].src = musicStoredDark[3].content.bannerImg
+iconImg[3].src = musicStoredDark[3].content.iconImg
+nameAuthor[3].innerHTML = musicStoredDark[3].content.nameAuthor
+descript[3].innerHTML = musicStoredDark[3].content.descript
+audio[3].src = musicStoredDark[3].content.music
+forwardBackDark()
+
 
     
   }else{
+
     IncoMode.src = 'assets/icon_lua.svg'
     logoImg.src = 'assets/logo_myHero.svg'
+    bannerImg[0].src = musicStored[0].content.bannerImg
+    iconImg[0].src = musicStored[0].content.iconImg
+    nameAuthor[0].innerHTML = musicStored[0].content.nameAuthor
+    descript[0].innerHTML = musicStored[0].content.descript
+    audio[0].src = musicStored[0].content.music
     
-     bannerImg[0].src = Midoriya.bannerImg
-     iconImg[0].src = Midoriya.iconImg
-     nameAuthor[0].innerHTML = Midoriya.nameAuthor
-     descript[0].innerHTML = Midoriya.descript
-     audio[0].src = Midoriya.music
-
-     bannerImg[1].src = Mirko.bannerImg
-     iconImg[1].src = Mirko.iconImg
-     nameAuthor[1].innerHTML = Mirko.nameAuthor
-     descript[1].innerHTML = Mirko.descript
-     audio[1].src = Mirko.music
-
-    bannerImg[2].src = Mirio.bannerImg
-    iconImg[2].src = Mirio.iconImg
-    nameAuthor[2].innerHTML = Mirio.nameAuthor
-    descript[2].innerHTML = Mirio.descript
-    audio[2].src = Mirio.music
-
-    bannerImg[3].src = simboloPaz.bannerImg
-    iconImg[3].src = simboloPaz.iconImg
-    nameAuthor[3].innerHTML = simboloPaz.nameAuthor
-    descript[3].innerHTML = simboloPaz.descript
-    audio[3].src = simboloPaz.music
-
-
+    bannerImg[1].src = musicStored[1].content.bannerImg
+    iconImg[1].src = musicStored[1].content.iconImg
+    nameAuthor[1].innerHTML = musicStored[1].content.nameAuthor
+    descript[1].innerHTML = musicStored[1].content.descript
+    audio[1].src = musicStored[1].content.music
     
+    bannerImg[2].src =  musicStored[2].content.bannerImg
+    iconImg[2].src =  musicStored[2].content.iconImg
+    nameAuthor[2].innerHTML = musicStored[2].content.nameAuthor
+    descript[2].innerHTML = musicStored[2].content.descript
+    audio[2].src = musicStored[2].content.music
+    
+    bannerImg[3].src = musicStored[3].content.bannerImg
+    iconImg[3].src = musicStored[3].content.iconImg
+    nameAuthor[3].innerHTML = musicStored[3].content.nameAuthor
+    descript[3].innerHTML = musicStored[3].content.descript
+    audio[3].src = musicStored[3].content.music
+
+    forwardBack()
   }
+
 
 }
 
-function responsiv(){
-  let  musicNumber = 0;
+function forwardBack(){
+  let musicNumber = 0
+  btn_trocar[1].addEventListener('click', ()=>{
+    musicNumber++;
+if (musicNumber > 3){
+  musicNumber= 0
+}
 
- btn_trocar[1].addEventListener('click', ()=>{
 
-  musicNumber > 2 ? musicNumber = 0 : musicNumber++;
-  buttonPause[0].style = " display:none;"
-  buttonPlay[0].style = " display:block;"
-bannerImg[0].src = musicStored[musicNumber].content.bannerImg
-iconImg[0].src = musicStored[musicNumber].content.iconImg
-nameAuthor[0].innerHTML = musicStored[musicNumber].content.nameAuthor
-descript[0].innerHTML = musicStored[musicNumber].content.descript
-audio[0].src = musicStored[musicNumber].content.music
-
- });
-
- btn_trocar[0].addEventListener('click',()=>{
-  musicNumber--;
-  if(musicNumber < 0){
-    musicNumber = 3
-  }
-  buttonPause[0].style = " display:none;"
-  buttonPlay[0].style = " display:block;"
+    
+    buttonPause[0].style = " display:none;"
+    buttonPlay[0].style = " display:block;"
   bannerImg[0].src = musicStored[musicNumber].content.bannerImg
   iconImg[0].src = musicStored[musicNumber].content.iconImg
   nameAuthor[0].innerHTML = musicStored[musicNumber].content.nameAuthor
   descript[0].innerHTML = musicStored[musicNumber].content.descript
   audio[0].src = musicStored[musicNumber].content.music
   
-
- });
+   });
+  
+   btn_trocar[0].addEventListener('click',()=>{
+    musicNumber--;
+    if(musicNumber< 0){
+      musicNumber = 3
+    }
+ 
+    buttonPause[0].style = " display:none;"
+    buttonPlay[0].style = " display:block;"
+    bannerImg[0].src = musicStored[musicNumber].content.bannerImg
+    iconImg[0].src = musicStored[musicNumber].content.iconImg
+    nameAuthor[0].innerHTML = musicStored[musicNumber].content.nameAuthor
+    descript[0].innerHTML = musicStored[musicNumber].content.descript
+    audio[0].src = musicStored[musicNumber].content.music
+    
+  
+   });
   
 }
-responsiv()
+
+function forwardBackDark(){
+ 
+  let musicNumber = 0
+ 
+    btn_trocar[1].addEventListener('click', ()=>{
+      musicNumber++
+      if (musicNumber > 3){
+        musicNumber = 0
+      }
+        buttonPause[0].style = " display:none;"
+    buttonPlay[0].style = " display:block;"
+    bannerImg[0].src = musicStoredDark[musicNumber].content.bannerImg
+    iconImg[0].src = musicStoredDark[musicNumber].content.iconImg
+    nameAuthor[0].innerHTML = musicStoredDark[musicNumber].content.nameAuthor
+    descript[0].innerHTML = musicStoredDark[musicNumber].content.descript
+    audio[0].src = musicStoredDark[musicNumber].content.music
+    
+      
+  
+    });
+
+    btn_trocar[0].addEventListener('click',()=>{
+      musicNumber--;
+      if(musicNumber < 0){
+        musicNumber = 3
+      }
+      buttonPause[0].style = " display:none;"
+      buttonPlay[0].style = " display:block;"
+      bannerImg[0].src = musicStoredDark[musicNumber].content.bannerImg
+      iconImg[0].src = musicStoredDark[musicNumber].content.iconImg
+      nameAuthor[0].innerHTML = musicStoredDark[musicNumber].content.nameAuthor
+      descript[0].innerHTML = musicStoredDark[musicNumber].content.descript
+      audio[0].src = musicStoredDark[musicNumber].content.music
+
+   });
+}
+forwardBack()
 playMusic()
 pauseMusic()
+
+
+
