@@ -1,47 +1,54 @@
 
 const audio = [document.querySelector('.audio0'),document.querySelector('.audio1'),document.querySelector('.audio2'), document.querySelector('.audio3')]
+
 const  buttonPlay = [document.querySelector('#btn_0'),document.querySelector('#btn_1'), document.querySelector('#btn_2'), document.querySelector('#btn_3')]
+
 const  buttonPause = [document.querySelector('#btn_0_pause'),document.querySelector('#btn_1_pause'), document.querySelector('#btn_2_pause'), document.querySelector('#btn_3_pause')]
-const body = document.querySelector('body')
-const main = document.querySelector('main')
-const IncoMode = document.querySelector('.icon_mode')
+
 const descript =[ document.querySelector('#descript0'), document.querySelector('#descript1'), document.querySelector('#descript2'),document.querySelector('#descript3')]
+
 const bannerImg = [document.querySelector('#bannerImg0'),document.querySelector('#bannerImg1'),document.querySelector('#bannerImg2'),document.querySelector('#bannerImg3')]
+
+const a = [document.querySelector('.a0'),document.querySelector('.a1'),document.querySelector('.a2'), document.querySelector('.a3'),]
 const iconImg = [document.querySelector('#iconImg0'), document.querySelector('#iconImg1'),document.querySelector('#iconImg2'), document.querySelector('#iconImg3') ]
+
 const nameAuthor = [document.querySelector('#nameAuthor0'),document.querySelector('#nameAuthor1'),document.querySelector('#nameAuthor2'),document.querySelector('#nameAuthor3')]
 
 const btn_trocar =[ document.querySelector('.btnVoltar'), document.querySelector('.bntAvasar')]
-
 const logoImg = document.querySelector('#Logo')
+const body = document.querySelector('body')
+const main = document.querySelector('main')
+const IncoMode = document.querySelector('.icon_mode')
 
 class musicContainer {
-  constructor(bannerImg, descript, iconImg, nameAuthor, music) {
+  constructor(bannerImg, descript, iconImg, nameAuthor, music, linkCanal) {
     this.bannerImg = bannerImg
     this.descript = descript
     this.iconImg = iconImg
     this.nameAuthor = nameAuthor
     this.music = music
+    this.linkCanal = linkCanal
 
   }
 }
 
 const musicStored = [
 
-   {content : new musicContainer('assets/banner_midoriya.svg', 'Rap do Midoriya (Boku No Hero) | Herói Número 1 | Basara','assets/icon_basara.svg','Basara','assets/MIdoriya.mp4')},
+   {content : new musicContainer('assets/banner_midoriya.svg', 'Rap do Midoriya (Boku No Hero) | Herói Número 1 | Basara','assets/icon_basara.svg','Basara','assets/MIdoriya.mp4','https://www.youtube.com/@BasaraMusic')},
 
-   {content : new musicContainer('assets/bannerMirko.svg', ' FELÍCIA ROCK - Rabbit Hero ( Mirko / Boku no Hero )','assets/Icon_Felicia.svg','Felícia Rock','assets/Mirko.mp4')},
+   {content : new musicContainer('assets/bannerMirko.svg', ' FELÍCIA ROCK - Rabbit Hero ( Mirko / Boku no Hero )','assets/Icon_Felicia.svg','Felícia Rock','assets/Mirko.mp4','https://www.youtube.com/@FeliciaRockOficial')},
   
-   {content: new musicContainer('assets/Banner_mirioTogata.svg', '1 Milhão | Novatroop | Mirio Togata (Boku no Hero)','assets/icon_novatrop.svg','Novatroop','assets/mirio.mp4')},
+   {content: new musicContainer('assets/Banner_mirioTogata.svg', '1 Milhão | Novatroop | Mirio Togata (Boku no Hero)','assets/icon_novatrop.svg','Novatroop','assets/mirio.mp4','https://www.youtube.com/@NovatroopOfc')},
   
-   {content: new musicContainer('assets/banner_siboloPaz.svg', 'Taka - Símbolo da Paz [Remake] |Prod. @Khellvyn','assets/icon_Taka.svg','TakaB','assets/SimboloPaz.mp4')},
+   {content: new musicContainer('assets/banner_siboloPaz.svg', 'Taka - Símbolo da Paz [Remake] |Prod. @Khellvyn','assets/icon_Taka.svg','TakaB','assets/SimboloPaz.mp4','https://www.youtube.com/@TakaB')},
   
 ]
 
 const musicStoredDark = [
-  {content : new musicContainer('assets/banner_overhaul.svg', 'Revisão | Overhaul ( Boku no Hero ) | Enygma', 'assets/icon_enygma.svg','Enygma','assets/overhaul.mp4')},
-  {content : new musicContainer('assets/banner_himiko.svg','Himiko Toga(Boku no Hero)OQUE ME FAZ TE AMAR | Felícia Rock','assets/Icon_Felicia.svg','Felícia Rock','assets/himiko.mp4')},
-  {content : new musicContainer('assets/banner_gentle.svg', 'Malfeitor Gentil | Novatroop | Gentle Criminal (Boku no Hero)', 'assets/icon_novatrop.svg','Novatroop','assets/gentle.mp4')},
-  {content : new musicContainer('assets/banner_schigaraki.svg','Shigaraki Tomura - O Símbolo do Mal (Boku no Hero) TK RAPS','assets/icon_tkRaps.svg','TK RAPS','assets/schigaraki.mp4')}
+  {content : new musicContainer('assets/banner_overhaul.svg', 'Revisão | Overhaul ( Boku no Hero ) | Enygma', 'assets/icon_enygma.svg','Enygma','assets/overhaul.mp4','https://www.youtube.com/@Enygma..'),},
+  {content : new musicContainer('assets/banner_himiko.svg','Himiko Toga(Boku no Hero)OQUE ME FAZ TE AMAR | Felícia Rock','assets/Icon_Felicia.svg','Felícia Rock','assets/himiko.mp4','https://www.youtube.com/@FeliciaRockOficial')},
+  {content : new musicContainer('assets/banner_gentle.svg', 'Malfeitor Gentil | Novatroop | Gentle Criminal (Boku no Hero)', 'assets/icon_novatrop.svg','Novatroop','assets/gentle.mp4','https://www.youtube.com/@NovatroopOfc')},
+  {content : new musicContainer('assets/banner_schigaraki.svg','Shigaraki Tomura - O Símbolo do Mal (Boku no Hero) TK RAPS','assets/icon_tkRaps.svg','TK RAPS','assets/schigaraki.mp4','https://www.youtube.com/@TKRAPS')}
 ]
 
  
@@ -59,24 +66,28 @@ iconImg[0].src = musicStored[0].content.iconImg
 nameAuthor[0].innerHTML = musicStored[0].content.nameAuthor
 descript[0].innerHTML = musicStored[0].content.descript
 audio[0].src = musicStored[0].content.music
+a[0].href = musicStored[0].content.linkCanal
 
 bannerImg[1].src = musicStored[1].content.bannerImg
 iconImg[1].src = musicStored[1].content.iconImg
 nameAuthor[1].innerHTML = musicStored[1].content.nameAuthor
 descript[1].innerHTML = musicStored[1].content.descript
 audio[1].src = musicStored[1].content.music
+a[1].href = musicStored[1].content.linkCanal
 
 bannerImg[2].src =  musicStored[2].content.bannerImg
 iconImg[2].src =  musicStored[2].content.iconImg
 nameAuthor[2].innerHTML = musicStored[2].content.nameAuthor
 descript[2].innerHTML = musicStored[2].content.descript
 audio[2].src = musicStored[2].content.music
+a[2].href = musicStored[2].content.linkCanal
 
 bannerImg[3].src = musicStored[3].content.bannerImg
 iconImg[3].src = musicStored[3].content.iconImg
 nameAuthor[3].innerHTML = musicStored[3].content.nameAuthor
 descript[3].innerHTML = musicStored[3].content.descript
 audio[3].src = musicStored[3].content.music
+a[3].href = musicStored[3].content.linkCanal
 
 
 
@@ -166,24 +177,28 @@ iconImg[0].src = musicStoredDark[0].content.iconImg
 nameAuthor[0].innerHTML = musicStoredDark[0].content.nameAuthor
 descript[0].innerHTML = musicStoredDark[0].content.descript
 audio[0].src = musicStoredDark[0].content.music
+a[0].href = musicStoredDark[0].content.linkCanal
 
 bannerImg[1].src = musicStoredDark[1].content.bannerImg
 iconImg[1].src = musicStoredDark[1].content.iconImg
 nameAuthor[1].innerHTML = musicStoredDark[1].content.nameAuthor
 descript[1].innerHTML = musicStoredDark[1].content.descript
 audio[1].src = musicStoredDark[1].content.music
+a[1].href = musicStoredDark[1].content.linkCanal
 
 bannerImg[2].src =  musicStoredDark[2].content.bannerImg
 iconImg[2].src =  musicStoredDark[2].content.iconImg
 nameAuthor[2].innerHTML = musicStoredDark[2].content.nameAuthor
 descript[2].innerHTML = musicStoredDark[2].content.descript
 audio[2].src = musicStoredDark[2].content.music
+a[2].href = musicStoredDark[2].content.linkCanal
 
 bannerImg[3].src = musicStoredDark[3].content.bannerImg
 iconImg[3].src = musicStoredDark[3].content.iconImg
 nameAuthor[3].innerHTML = musicStoredDark[3].content.nameAuthor
 descript[3].innerHTML = musicStoredDark[3].content.descript
 audio[3].src = musicStoredDark[3].content.music
+a[3].href = musicStoredDark[3].content.linkCanal
 forwardBackDark()
 
 
@@ -197,24 +212,28 @@ forwardBackDark()
     nameAuthor[0].innerHTML = musicStored[0].content.nameAuthor
     descript[0].innerHTML = musicStored[0].content.descript
     audio[0].src = musicStored[0].content.music
+    a[0].href = musicStored[0].content.linkCanal
     
     bannerImg[1].src = musicStored[1].content.bannerImg
     iconImg[1].src = musicStored[1].content.iconImg
     nameAuthor[1].innerHTML = musicStored[1].content.nameAuthor
     descript[1].innerHTML = musicStored[1].content.descript
     audio[1].src = musicStored[1].content.music
+    a[1].href = musicStored[1].content.linkCanal
     
     bannerImg[2].src =  musicStored[2].content.bannerImg
     iconImg[2].src =  musicStored[2].content.iconImg
     nameAuthor[2].innerHTML = musicStored[2].content.nameAuthor
     descript[2].innerHTML = musicStored[2].content.descript
     audio[2].src = musicStored[2].content.music
+    a[2].href = musicStored[2].content.linkCanal
     
     bannerImg[3].src = musicStored[3].content.bannerImg
     iconImg[3].src = musicStored[3].content.iconImg
     nameAuthor[3].innerHTML = musicStored[3].content.nameAuthor
     descript[3].innerHTML = musicStored[3].content.descript
     audio[3].src = musicStored[3].content.music
+    a[3].href = musicStored[3].content.linkCanal
 
     forwardBack()
   }
@@ -239,6 +258,7 @@ if (musicNumber > 3){
   nameAuthor[0].innerHTML = musicStored[musicNumber].content.nameAuthor
   descript[0].innerHTML = musicStored[musicNumber].content.descript
   audio[0].src = musicStored[musicNumber].content.music
+  a[0].href = musicStored[musicNumber].content.linkCanal
   
    });
   
@@ -255,7 +275,7 @@ if (musicNumber > 3){
     nameAuthor[0].innerHTML = musicStored[musicNumber].content.nameAuthor
     descript[0].innerHTML = musicStored[musicNumber].content.descript
     audio[0].src = musicStored[musicNumber].content.music
-    
+    a[0].href = musicStored[musicNumber].content.linkCanal
   
    });
   
@@ -277,7 +297,7 @@ function forwardBackDark(){
     nameAuthor[0].innerHTML = musicStoredDark[musicNumber].content.nameAuthor
     descript[0].innerHTML = musicStoredDark[musicNumber].content.descript
     audio[0].src = musicStoredDark[musicNumber].content.music
-    
+    a[0].href = musicStoredDark[musicNumber].content.linkCanal
       
   
     });
@@ -294,6 +314,7 @@ function forwardBackDark(){
       nameAuthor[0].innerHTML = musicStoredDark[musicNumber].content.nameAuthor
       descript[0].innerHTML = musicStoredDark[musicNumber].content.descript
       audio[0].src = musicStoredDark[musicNumber].content.music
+      a[0].href = musicStoredDark[musicNumber].content.linkCanal
 
    });
 }

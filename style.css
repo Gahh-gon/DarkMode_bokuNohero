@@ -93,8 +93,22 @@ width: 46px;
     flex-direction: row;
     align-items: center;
     justify-content: left;
-    gap: 10px;
+  
     padding: 10px;
+}
+.canal img{
+    border-radius: 50%;
+}
+a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #D90505;
 }
 
 .darkModeB{
@@ -163,6 +177,9 @@ background-color: #000118;
     }
     .btn_container img{
         width: 40px;
+    }
+    .darkModeB{
+        background-color: #000118;
     }
     
    }
